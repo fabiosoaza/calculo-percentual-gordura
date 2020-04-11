@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">Teste de Percentual de Gordura</string>
+    <string name="labelNumeroDobras">Número de Dobras</string>
+    <string name="labelSexo">Sexo</string>
+    <string name="labelSexoMasculino">Masculino</string>
+    <string name="labelSexoFeminino">Feminino</string>
+    <string name="labelIdade">Idade</string>
+    <string name="labelPeso">Peso</string>
+    <string name="labelTriceps">Tríceps</string>
+    <string name="labelSupraIliaca">Supra-ilíaca</string>
+    <string name="labelAbnominal">Abdominal</string>
+    <string name="labelSubescapular">Subescapular</string>
+    <string name="labelCoxa">Coxa</string>
+    <string name="labelCalcularPercentual">Calcular</string>
+    <string name="labelResultadoPercentualGordura">Resultado</string>
+    <string name="labelTextViewHeaderDensidadeCorporal">Densidade Corporal</string>
+    <string name="labelTextViewHeaderMassaMagra">Massa Magra (kg)</string>
+    <string name="labelTextViewHeaderGorda">Massa Gorda (kg)</string>
+    <string name="labelTextViewHeaderPercentualGordura">% Gordura</string>
+    <string name="labelTextViewHeaderPercentualMassaMagra">%Massa Magra</string>
+    <string name="labelTextViewHeaderPesoIdeal">Peso Ideal</string>
+    <string name="labelTextViewHeaderPesoEmExcesso">Peso em Excesso</string>
+    <string name="labelTextViewHeaderClassificacao">Classificação</string>
+    <string name="labelClassificaoMagro">Magro</string>
+    <string name="labelClassificaoAbaixoMedia">Abaixo da Média</string>
+    <string name="labelClassificaoMedia">Na Média</string>
+    <string name="labelClassificaoAcimaMedia">Acima da Média</string>
+    <string name="labelClassificacaoObeso">Obeso</string>
+
+
+</resources>
