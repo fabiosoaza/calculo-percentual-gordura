@@ -44,12 +44,12 @@ class ResultadoActivity : AppCompatActivity() {
         textViewResultadoPercentualMassaMagra.text = formatar(resultado.percentualMassaMagra)
         textViewResultadoPesoIdeal.text = formatar(resultado.pesoIdeal)
         textViewResultadoPesoExcesso.text = formatar(resultado.pesoExcesso)
-        textViewResultadoClassificacao.text = textoClassificacao(resultado.classificacao)
+        textViewResultadoClassificacao.text = formatarClassificacao(resultado.classificacao)
 
 
      }
 
-    private fun textoClassificacao(classificacao:ClassificacaoPercentualGordura) : String{
+    private fun formatarClassificacao(classificacao:ClassificacaoPercentualGordura) : String{
         return when (classificacao) {
             ClassificacaoPercentualGordura.MAGRO -> getString(R.string.labelClassificaoMagro)
             ClassificacaoPercentualGordura.ABAIXO_MEDIA -> getString(R.string.labelClassificaoAbaixoMedia)
