@@ -2,8 +2,8 @@ package com.example.calculo.percentual.gordura.calculadora
 
 import java.lang.IllegalArgumentException
 import java.math.BigDecimal
-import com.example.calculo.percentual.gordura.calculadora.BigDecimalUtils.Companion.valorMenor
-import com.example.calculo.percentual.gordura.calculadora.BigDecimalUtils.Companion.valorMaiorOuIgual
+import com.example.calculo.percentual.gordura.utils.BigDecimalUtils.Companion.valorMenor
+import com.example.calculo.percentual.gordura.utils.BigDecimalUtils.Companion.valorMaiorOuIgual
 
 class ClassificadoraPercentualGordura {
 

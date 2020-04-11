@@ -1,5 +1,7 @@
 package com.example.calculo.percentual.gordura
 
+import android.content.Context
+import androidx.test.InstrumentationRegistry
 import androidx.test.espresso.Espresso
 import androidx.test.espresso.ViewInteraction
 import androidx.test.espresso.action.ViewActions
@@ -40,6 +42,7 @@ class ExpressoElementUtils {
             val element = findEditById(elementId)
             element.check(matches(withText(texto)))
         }
+
 
     }
 

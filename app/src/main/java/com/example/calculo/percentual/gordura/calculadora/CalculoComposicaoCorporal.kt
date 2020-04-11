@@ -1,5 +1,6 @@
 package com.example.calculo.percentual.gordura.calculadora
 
+import com.example.calculo.percentual.gordura.utils.BigDecimalUtils
 import java.math.BigDecimal
 
 data class CalculoComposicaoCorporal(var percentualGordura:BigDecimal, var peso:BigDecimal, var sexo:Sexo ) {

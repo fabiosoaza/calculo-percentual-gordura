@@ -1,47 +1,60 @@
 package com.example.calculo.percentual.gordura
 
-import androidx.test.espresso.action.ViewActions.*
+import com.example.calculo.percentual.gordura.utils.FormatUtils
+import java.math.BigDecimal
 
 class PageMainActivity {
 
-    fun informarIdade(valor:String){
+    fun informarIdade(medida: BigDecimal) {
+        val valor = formatarMedida(medida)
         ExpressoElementUtils.preencherEditText(R.id.editIdade, valor)
     }
 
-    fun informarPeso(valor:String){
+    fun informarPeso(medida: BigDecimal) {
+        val valor = formatarMedida(medida)
         ExpressoElementUtils.preencherEditText(R.id.editPeso, valor)
     }
 
-    fun informarSupraIliaca(valor:String){
+    fun informarSupraIliaca(medida: BigDecimal) {
+        val valor = formatarMedida(medida)
         ExpressoElementUtils.preencherEditText(R.id.editSupra, valor)
     }
 
-    fun selecionarSexoMasculino(){
+    fun selecionarSexoMasculino() {
         ExpressoElementUtils.marcarRadio(R.id.radioMasculino)
     }
 
-    fun selecionarSexoFeminino(){
+    fun selecionarSexoFeminino() {
         ExpressoElementUtils.marcarRadio(R.id.radioFeminino)
     }
 
-    fun informarTriceps(valor:String){
+    fun informarTriceps(medida: BigDecimal) {
+        val valor = formatarMedida(medida)
         ExpressoElementUtils.preencherEditText(R.id.editTriceps, valor)
     }
 
-    fun informarSubscapular(valor:String){
+    fun informarSubscapular(medida: BigDecimal) {
+        val valor = formatarMedida(medida)
         ExpressoElementUtils.preencherEditText(R.id.editSubescapular, valor)
     }
 
-    fun informarCoxa(valor:String){
+    fun informarCoxa(medida: BigDecimal) {
+        val valor = formatarMedida(medida)
         ExpressoElementUtils.preencherEditText(R.id.editCoxa, valor)
     }
 
-    fun informarAbdominal(valor:String){
+    fun informarAbdominal(medida: BigDecimal) {
+        val valor = formatarMedida(medida)
         ExpressoElementUtils.preencherEditText(R.id.editAbdominal, valor)
     }
 
-    fun calcular(){
+
+    fun calcular() {
         ExpressoElementUtils.clicarBotao(R.id.btnCalcular)
+    }
+
+    private fun formatarMedida(medida: BigDecimal): String {
+        return FormatUtils.formatarValor(medida)
     }
 
 

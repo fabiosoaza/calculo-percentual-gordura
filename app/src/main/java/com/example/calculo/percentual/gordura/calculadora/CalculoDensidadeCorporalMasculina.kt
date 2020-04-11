@@ -1,5 +1,6 @@
 package com.example.calculo.percentual.gordura.calculadora
 
+import com.example.calculo.percentual.gordura.utils.BigDecimalUtils
 import java.math.BigDecimal
 import kotlin.math.log10
 

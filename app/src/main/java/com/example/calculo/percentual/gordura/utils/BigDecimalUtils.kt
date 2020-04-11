@@ -1,4 +1,4 @@
-package com.example.calculo.percentual.gordura.calculadora
+package com.example.calculo.percentual.gordura.utils
 
 import java.math.BigDecimal
 import java.math.RoundingMode
@@ -6,17 +6,29 @@ import java.math.RoundingMode
 class BigDecimalUtils {
     companion object {
         fun arredondar(valor : Double) : BigDecimal {
-            return arredondar(BigDecimal(valor), 16)
+            return arredondar(
+                BigDecimal(valor),
+                16
+            )
         }
         fun arredondar(valor : String) : BigDecimal {
-            return arredondar(BigDecimal(valor), 16)
+            return arredondar(
+                BigDecimal(valor),
+                16
+            )
         }
         fun arredondar(valor : Int) : BigDecimal {
-            return arredondar(BigDecimal(valor), 16)
+            return arredondar(
+                BigDecimal(valor),
+                16
+            )
         }
 
         fun arredondar(valor : BigDecimal) : BigDecimal {
-            return arredondar(valor, 16)
+            return arredondar(
+                valor,
+                16
+            )
         }
 
         fun arredondar(valor : BigDecimal, casas:Int) : BigDecimal {
@@ -36,7 +48,13 @@ class BigDecimalUtils {
         }
 
         fun valorEntre(valor: BigDecimal, valorInicial: BigDecimal, valorFinal:BigDecimal): Boolean {
-            return valorMaiorOuIgual(valor, valorInicial) && valorMenorOuIgual(valor, valorFinal)
+            return valorMaiorOuIgual(
+                valor,
+                valorInicial
+            ) && valorMenorOuIgual(
+                valor,
+                valorFinal
+            )
         }
 
         fun valorMaior(valor1: BigDecimal, valor2: BigDecimal): Boolean {

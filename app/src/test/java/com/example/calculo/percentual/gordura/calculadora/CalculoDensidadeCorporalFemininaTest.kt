@@ -1,5 +1,6 @@
 package com.example.calculo.percentual.gordura.calculadora
 
+import com.example.calculo.percentual.gordura.utils.BigDecimalUtils
 import org.junit.Assert.assertEquals
 import org.junit.Test
 import java.math.BigDecimal
