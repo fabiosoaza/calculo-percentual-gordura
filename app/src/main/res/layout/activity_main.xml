@@ -82,13 +82,13 @@
 
     <Button
         android:id="@+id/btnCalcular"
-        android:layout_width="360dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="@string/labelCalcularPercentual"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/editAbdominal"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/editAbdominal"
         app:layout_constraintTop_toBottomOf="@+id/editAbdominal"
         app:layout_constraintVertical_bias="0.194" />
@@ -102,10 +102,9 @@
         android:ems="10"
         android:hint="@string/labelIdade"
         android:inputType="number"
-        app:layout_constraintEnd_toEndOf="@+id/textViewTitulo"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/textViewTitulo"
-        app:layout_constraintTop_toBottomOf="@+id/textViewTitulo" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/editPeso"
@@ -124,7 +123,7 @@
 
     <TextView
         android:id="@+id/labelSexo"
-        android:layout_width="360dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="@string/labelSexo"
@@ -148,22 +147,10 @@
         app:layout_constraintTop_toBottomOf="@+id/editPeso"
         tools:text="@string/labelSupraIliaca" />
 
-    <TextView
-        android:id="@+id/textViewTitulo"
-        style="@style/styleTituloApp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="@string/app_name"
-        app:layout_constraintHorizontal_bias="0.289"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <RadioGroup
         android:id="@+id/radioGoupSexo"
-        android:layout_width="360dp"
-        android:layout_height="42dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:checkedButton="@id/radioMasculino"
         android:orientation="horizontal"
@@ -174,7 +161,7 @@
 
         <RadioButton
             android:id="@+id/radioMasculino"
-            android:layout_width="140dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/labelSexoMasculino"
             tools:layout_editor_absoluteX="56dp"
@@ -182,7 +169,7 @@
 
         <RadioButton
             android:id="@+id/radioFeminino"
-            android:layout_width="140dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/labelSexoFeminino" />
 
