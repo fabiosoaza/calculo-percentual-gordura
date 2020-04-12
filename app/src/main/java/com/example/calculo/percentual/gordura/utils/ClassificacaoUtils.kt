@@ -12,7 +12,6 @@ class ClassificacaoUtils {
                 ClassificacaoPercentualGordura.MEDIA -> R.string.labelClassificaoMedia
                 ClassificacaoPercentualGordura.ACIMA_MEDIA -> R.string.labelClassificaoAcimaMedia
                 ClassificacaoPercentualGordura.OBESO -> R.string.labelClassificacaoObeso
-                else -> throw IllegalArgumentException()
             }
         }
 
