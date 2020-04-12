@@ -4,6 +4,7 @@ import androidx.test.InstrumentationRegistry
 import androidx.test.espresso.intent.Intents
 import androidx.test.espresso.intent.matcher.IntentMatchers.hasComponent
 import com.example.calculo.percentual.gordura.calculadora.ClassificacaoPercentualGordura
+import com.example.calculo.percentual.gordura.utils.ClassificacaoUtils
 import com.example.calculo.percentual.gordura.utils.FormatUtils
 import org.hamcrest.Matchers.not
 import java.math.BigDecimal
@@ -50,7 +51,8 @@ class PageResultadoActivity {
     }
 
     fun verificarClassificacao(classificacao:ClassificacaoPercentualGordura) {
-        val texto = FormatUtils.formatarClassificacao(InstrumentationRegistry.getTargetContext(), classificacao)
+        val context = InstrumentationRegistry.getTargetContext()
+        val texto = context.getString(ClassificacaoUtils.getResourceIdByClassificacao(classificacao))
         ExpressoElementUtils.verificarTextoElemento(R.id.textViewResultadoClassificacao, texto)
     }
 

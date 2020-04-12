@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.calculo.percentual.gordura.calculadora.CalculadoraResultado
 import com.example.calculo.percentual.gordura.calculadora.DadosCalculo
 import com.example.calculo.percentual.gordura.calculadora.Resultado
+import com.example.calculo.percentual.gordura.utils.ClassificacaoUtils
 import com.example.calculo.percentual.gordura.utils.FormatUtils
 import java.math.BigDecimal
 
@@ -30,7 +31,7 @@ class ResultadoActivity : AppCompatActivity() {
         atualizarValorNumerico(R.id.textViewResultadoPercentualMassaMagra, resultado.percentualMassaMagra)
         atualizarValorNumerico(R.id.textViewResultadoPesoIdeal, resultado.pesoIdeal)
         atualizarValorNumerico(R.id.textViewResultadoPesoExcesso, resultado.pesoExcesso)
-        atualizarTexto(R.id.textViewResultadoClassificacao, FormatUtils.formatarClassificacao(this, resultado.classificacao))
+        atualizarTexto(R.id.textViewResultadoClassificacao, getString(ClassificacaoUtils.getResourceIdByClassificacao(resultado.classificacao)))
      }
 
     private fun atualizarValorNumerico(viewId: Int, valor: BigDecimal) {
