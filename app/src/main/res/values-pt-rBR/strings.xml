@@ -27,7 +27,7 @@
     <string name="labelClassificaoMedia">Na Média</string>
     <string name="labelClassificaoAcimaMedia">Acima da Média</string>
     <string name="labelClassificacaoObeso">Obeso</string>
-    <string name="labelMessageErrorMandatory">O campo % deve ser preenchido</string>
+    <string name="labelMessageErrorMandatory">O campo {0} deve ser preenchido</string>
 
 
 

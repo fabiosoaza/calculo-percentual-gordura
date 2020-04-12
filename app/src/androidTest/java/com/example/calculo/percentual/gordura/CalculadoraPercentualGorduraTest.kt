@@ -1,10 +1,12 @@
 package com.example.calculo.percentual.gordura
 
 
+import androidx.test.espresso.intent.Intents
 import androidx.test.filters.LargeTest
 import androidx.test.rule.ActivityTestRule
 import androidx.test.runner.AndroidJUnit4
 import com.example.calculo.percentual.gordura.calculadora.ClassificacaoPercentualGordura
+import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -17,6 +19,7 @@ class CalculadoraPercentualGorduraTest {
     @Rule
     @JvmField
     var mActivityTestRule = ActivityTestRule(MainActivity::class.java)
+
 
     @Test
     fun deveCalcularPercentualGorduraMasculinaCorretamente() {
@@ -66,6 +69,96 @@ class CalculadoraPercentualGorduraTest {
         telaResultados.verificarPesoIdeal(medida("61.58"))
         telaResultados.verificarPesoExcesso(medida("-6.58"))
         telaResultados.verificarClassificacao(ClassificacaoPercentualGordura.MEDIA)
+    }
+
+    @Test
+    fun deveExibirMensagemErroCampoIdade() {
+        val telaPrincipal = PageMainActivity()
+        telaPrincipal.calcular()
+        telaPrincipal.verificarMensagemValidacaoIdade()
+        val telaResultados = PageResultadoActivity()
+        telaResultados.verificarActivityNaoEstaAberta()
+    }
+
+    @Test
+    fun deveExibirMensagemErroCampoPeso() {
+        val telaPrincipal = PageMainActivity()
+        telaPrincipal.informarIdade(medida("32"))
+        telaPrincipal.calcular()
+        telaPrincipal.verificarMensagemValidacaoPeso()
+        val telaResultados = PageResultadoActivity()
+        telaResultados.verificarActivityNaoEstaAberta()
+    }
+
+    @Test
+    fun deveExibirMensagemSupra() {
+        val telaPrincipal = PageMainActivity()
+        telaPrincipal.informarIdade(medida("32"))
+        telaPrincipal.informarPeso(medida("74"))
+        telaPrincipal.calcular()
+        telaPrincipal.verificarMensagemValidacaoSupraIliaca()
+        val telaResultados = PageResultadoActivity()
+        telaResultados.verificarActivityNaoEstaAberta()
+    }
+
+    @Test
+    fun deveExibirMensagemErroCampoTriceps() {
+        val telaPrincipal = PageMainActivity()
+
+        telaPrincipal.informarIdade(medida("32"))
+        telaPrincipal.informarPeso(medida("74"))
+        telaPrincipal.informarSupraIliaca(medida("10"))
+        telaPrincipal.selecionarSexoMasculino()
+        telaPrincipal.calcular()
+        telaPrincipal.verificarMensagemValidacaoTriceps()
+
+        val telaResultados = PageResultadoActivity()
+        telaResultados.verificarActivityNaoEstaAberta()
+    }
+
+    @Test
+    fun deveExibirMensagemErroCampoSubscapular() {
+        val telaPrincipal = PageMainActivity()
+        telaPrincipal.informarIdade(medida("32"))
+        telaPrincipal.informarPeso(medida("74"))
+        telaPrincipal.informarSupraIliaca(medida("10"))
+        telaPrincipal.selecionarSexoMasculino()
+        telaPrincipal.informarTriceps(medida("10"))
+        telaPrincipal.calcular()
+        telaPrincipal.verificarMensagemValidacaoSubscapular()
+        val telaResultados = PageResultadoActivity()
+        telaResultados.verificarActivityNaoEstaAberta()
+    }
+
+    @Test
+    fun deveExibirMensagemErroCampoCoxa() {
+        val telaPrincipal = PageMainActivity()
+        telaPrincipal.informarIdade(medida("32"))
+        telaPrincipal.informarPeso(medida("74"))
+        telaPrincipal.informarSupraIliaca(medida("10"))
+        telaPrincipal.selecionarSexoMasculino()
+        telaPrincipal.informarTriceps(medida("10"))
+        telaPrincipal.informarSubscapular(medida("10"))
+        telaPrincipal.calcular()
+        telaPrincipal.verificarMensagemValidacaoCoxa()
+        val telaResultados = PageResultadoActivity()
+        telaResultados.verificarActivityNaoEstaAberta()
+    }
+
+    @Test
+    fun deveExibirMensagemErroCampoAbdominal() {
+        val telaPrincipal = PageMainActivity()
+        telaPrincipal.informarIdade(medida("32"))
+        telaPrincipal.informarPeso(medida("74"))
+        telaPrincipal.informarSupraIliaca(medida("10"))
+        telaPrincipal.selecionarSexoMasculino()
+        telaPrincipal.informarTriceps(medida("10"))
+        telaPrincipal.informarSubscapular(medida("10"))
+        telaPrincipal.informarCoxa(medida("10"))
+        telaPrincipal.calcular()
+        telaPrincipal.verificarMensagemValidacaoAbdominal()
+        val telaResultados = PageResultadoActivity()
+        telaResultados.verificarActivityNaoEstaAberta()
     }
 
     private fun medida(valor: String): BigDecimal {

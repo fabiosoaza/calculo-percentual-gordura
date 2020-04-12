@@ -1,11 +1,18 @@
 package com.example.calculo.percentual.gordura
 
 import androidx.test.InstrumentationRegistry
+import androidx.test.espresso.intent.Intents
+import androidx.test.espresso.intent.matcher.IntentMatchers.hasComponent
 import com.example.calculo.percentual.gordura.calculadora.ClassificacaoPercentualGordura
 import com.example.calculo.percentual.gordura.utils.FormatUtils
+import org.hamcrest.Matchers.not
 import java.math.BigDecimal
 
 class PageResultadoActivity {
+
+    fun verificarActivityNaoEstaAberta() {
+        ExpressoElementUtils.verificarElementoNaoExiste(R.id.textviewResultado)
+    }
 
     fun verificarDensidadeCorporal(medida: BigDecimal) {
         val valor = formatarValor(medida)

@@ -26,6 +26,6 @@
     <string name="labelClassificaoMedia">Fit</string>
     <string name="labelClassificaoAcimaMedia">Overweight</string>
     <string name="labelClassificacaoObeso">Obese</string>
-    <string name="labelMessageErrorMandatory">Field % is required</string>
+    <string name="labelMessageErrorMandatory">Field {0} is required</string>
 
 </resources>
