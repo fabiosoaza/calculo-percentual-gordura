@@ -12,7 +12,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constarintLayout1"
         android:layout_width="match_parent"
-        android:layout_height="1000dp"
+        android:layout_height="wrap_content"
         android:paddingLeft="24dp"
         android:paddingTop="24dp"
         android:paddingRight="24dp"
@@ -24,6 +24,7 @@
             android:id="@+id/layoutEditIdade"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
             android:hint="@string/labelIdade"
             app:errorEnabled="true"
             app:layout_constraintEnd_toEndOf="parent"
@@ -43,6 +44,7 @@
             android:id="@+id/layoutEditPeso"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
             android:hint="@string/labelPeso"
             app:errorEnabled="true"
             app:layout_constraintEnd_toEndOf="@+id/layoutEditIdade"
@@ -63,6 +65,7 @@
             android:id="@+id/layoutEditSupra"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
             android:hint="@string/labelSupraIliaca"
             app:errorEnabled="true"
             app:layout_constraintEnd_toEndOf="@+id/layoutEditPeso"
@@ -83,6 +86,7 @@
             android:id="@+id/labelSexo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
             android:text="@string/labelSexo"
             app:layout_constraintEnd_toEndOf="@+id/layoutEditSupra"
             app:layout_constraintHorizontal_bias="0.0"
@@ -106,14 +110,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/labelSexoMasculino"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 tools:layout_editor_absoluteX="56dp"
                 tools:layout_editor_absoluteY="136dp" />
 
             <RadioButton
                 android:id="@+id/radioFeminino"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:text="@string/labelSexoFeminino" />
+                android:layout_height="wrap_content"
+                android:text="@string/labelSexoFeminino"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
         </RadioGroup>
 
@@ -122,6 +128,7 @@
             android:id="@+id/layoutEditTriceps"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
             android:hint="@string/labelTriceps"
             app:errorEnabled="true"
             app:layout_constraintEnd_toEndOf="@+id/radioGoupSexo"
@@ -142,6 +149,7 @@
             android:id="@+id/layoutEditAbdominal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
             android:hint="@string/labelAbnominal"
             app:errorEnabled="true"
             app:layout_constraintEnd_toEndOf="@+id/layoutEditTriceps"
@@ -162,6 +170,7 @@
             android:id="@+id/layoutEditSubescapular"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
             android:hint="@string/labelSubescapular"
             app:errorEnabled="true"
             app:layout_constraintEnd_toEndOf="@+id/layoutEditAbdominal"
@@ -182,6 +191,7 @@
             android:id="@+id/layoutEditCoxa"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
             android:hint="@string/labelCoxa"
             app:errorEnabled="true"
             app:layout_constraintEnd_toEndOf="@+id/layoutEditSubescapular"

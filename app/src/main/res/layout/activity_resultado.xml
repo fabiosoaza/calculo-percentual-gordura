@@ -45,125 +45,6 @@
 
 
     <TextView
-        android:id="@+id/textViewHeaderMassaMagra"
-        style="@style/styleLabelTituloResultado"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="@string/labelTextViewHeaderMassaMagra"
-        app:layout_constraintEnd_toEndOf="@+id/textViewResultadoPercentualGordura"
-        app:layout_constraintStart_toStartOf="@+id/textViewResultadoPercentualGordura"
-        app:layout_constraintTop_toBottomOf="@+id/textViewResultadoPercentualGordura" />
-
-    <TextView
-        android:id="@+id/textViewHeaderPercentualMassaMagra"
-        style="@style/styleLabelTituloResultado"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="@string/labelTextViewHeaderPercentualMassaMagra"
-        app:layout_constraintEnd_toEndOf="@+id/textViewResultadoMassaMagra"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/textViewResultadoMassaMagra"
-        app:layout_constraintTop_toBottomOf="@+id/textViewResultadoMassaMagra" />
-
-    <TextView
-        android:id="@+id/textViewHeaderPesoIdeal"
-        style="@style/styleLabelTituloResultado"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="@string/labelTextViewHeaderPesoIdeal"
-        app:layout_constraintEnd_toEndOf="@+id/textViewResultadoPercentualMassaMagra"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/textViewResultadoPercentualMassaMagra"
-        app:layout_constraintTop_toBottomOf="@+id/textViewResultadoPercentualMassaMagra" />
-
-    <TextView
-        android:id="@+id/textViewHeaderPesoExcesso"
-        style="@style/styleLabelTituloResultado"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="@string/labelTextViewHeaderPesoEmExcesso"
-        app:layout_constraintEnd_toEndOf="@+id/textViewResultadoPesoIdeal"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/textViewResultadoPesoIdeal"
-        app:layout_constraintTop_toBottomOf="@+id/textViewResultadoPesoIdeal" />
-
-    <TextView
-        android:id="@+id/textViewHeaderClassificacao"
-        style="@style/styleLabelTituloResultado"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="@string/labelTextViewHeaderClassificacao"
-        app:layout_constraintEnd_toEndOf="@+id/textViewResultadoPesoExcesso"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/textViewResultadoPesoExcesso"
-        app:layout_constraintTop_toBottomOf="@+id/textViewResultadoPesoExcesso" />
-
-    <TextView
-        android:id="@+id/textViewResultadoPesoIdeal"
-        style="@style/styleLabelNormal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text=""
-        app:layout_constraintEnd_toEndOf="@+id/textViewHeaderPesoIdeal"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/textViewHeaderPesoIdeal"
-        app:layout_constraintTop_toBottomOf="@+id/textViewHeaderPesoIdeal" />
-
-    <TextView
-        android:id="@+id/textViewResultadoPesoExcesso"
-        style="@style/styleLabelNormal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text=""
-        app:layout_constraintEnd_toEndOf="@+id/textViewHeaderPesoExcesso"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/textViewHeaderPesoExcesso"
-        app:layout_constraintTop_toBottomOf="@+id/textViewHeaderPesoExcesso" />
-
-    <TextView
-        android:id="@+id/textViewResultadoClassificacao"
-        style="@style/styleLabelNormal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text=""
-        app:layout_constraintEnd_toEndOf="@+id/textViewHeaderClassificacao"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/textViewHeaderClassificacao"
-        app:layout_constraintTop_toBottomOf="@+id/textViewHeaderClassificacao" />
-
-    <TextView
-        android:id="@+id/textViewResultadoMassaMagra"
-        style="@style/styleLabelNormal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text=""
-        app:layout_constraintEnd_toEndOf="@+id/textViewHeaderMassaMagra"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/textViewHeaderMassaMagra"
-        app:layout_constraintTop_toBottomOf="@+id/textViewHeaderMassaMagra" />
-
-    <TextView
-        android:id="@+id/textViewResultadoPercentualMassaMagra"
-        style="@style/styleLabelNormal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text=""
-        app:layout_constraintEnd_toEndOf="@+id/textViewHeaderPercentualMassaMagra"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/textViewHeaderPercentualMassaMagra"
-        app:layout_constraintTop_toBottomOf="@+id/textViewHeaderPercentualMassaMagra" />
-
-    <TextView
         android:id="@+id/textViewHeaderMassaGorda"
         style="@style/styleLabelTituloResultado"
         android:layout_width="wrap_content"
@@ -206,6 +87,125 @@
         app:layout_constraintEnd_toEndOf="@+id/textViewHeaderPercentualGordura"
         app:layout_constraintStart_toStartOf="@+id/textViewHeaderPercentualGordura"
         app:layout_constraintTop_toBottomOf="@+id/textViewHeaderPercentualGordura" />
+
+    <TextView
+        android:id="@+id/textViewHeaderMassaMagra"
+        style="@style/styleLabelTituloResultado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/labelTextViewHeaderMassaMagra"
+        app:layout_constraintEnd_toEndOf="@+id/textViewResultadoPercentualGordura"
+        app:layout_constraintStart_toStartOf="@+id/textViewResultadoPercentualGordura"
+        app:layout_constraintTop_toBottomOf="@+id/textViewResultadoPercentualGordura" />
+
+    <TextView
+        android:id="@+id/textViewResultadoMassaMagra"
+        style="@style/styleLabelNormal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="@+id/textViewHeaderMassaMagra"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/textViewHeaderMassaMagra"
+        app:layout_constraintTop_toBottomOf="@+id/textViewHeaderMassaMagra" />
+
+    <TextView
+        android:id="@+id/textViewHeaderPercentualMassaMagra"
+        style="@style/styleLabelTituloResultado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/labelTextViewHeaderPercentualMassaMagra"
+        app:layout_constraintEnd_toEndOf="@+id/textViewResultadoMassaMagra"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/textViewResultadoMassaMagra"
+        app:layout_constraintTop_toBottomOf="@+id/textViewResultadoMassaMagra" />
+
+    <TextView
+        android:id="@+id/textViewResultadoPercentualMassaMagra"
+        style="@style/styleLabelNormal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="@+id/textViewHeaderPercentualMassaMagra"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textViewHeaderPercentualMassaMagra"
+        app:layout_constraintTop_toBottomOf="@+id/textViewHeaderPercentualMassaMagra" />
+
+    <TextView
+        android:id="@+id/textViewHeaderPesoIdeal"
+        style="@style/styleLabelTituloResultado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/labelTextViewHeaderPesoIdeal"
+        app:layout_constraintEnd_toEndOf="@+id/textViewResultadoPercentualMassaMagra"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textViewResultadoPercentualMassaMagra"
+        app:layout_constraintTop_toBottomOf="@+id/textViewResultadoPercentualMassaMagra" />
+
+    <TextView
+        android:id="@+id/textViewResultadoPesoIdeal"
+        style="@style/styleLabelNormal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="@+id/textViewHeaderPesoIdeal"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/textViewHeaderPesoIdeal"
+        app:layout_constraintTop_toBottomOf="@+id/textViewHeaderPesoIdeal" />
+
+    <TextView
+        android:id="@+id/textViewHeaderPesoExcesso"
+        style="@style/styleLabelTituloResultado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/labelTextViewHeaderPesoEmExcesso"
+        app:layout_constraintEnd_toEndOf="@+id/textViewResultadoPesoIdeal"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textViewResultadoPesoIdeal"
+        app:layout_constraintTop_toBottomOf="@+id/textViewResultadoPesoIdeal" />
+
+    <TextView
+        android:id="@+id/textViewResultadoPesoExcesso"
+        style="@style/styleLabelNormal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="@+id/textViewHeaderPesoExcesso"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textViewHeaderPesoExcesso"
+        app:layout_constraintTop_toBottomOf="@+id/textViewHeaderPesoExcesso" />
+
+    <TextView
+        android:id="@+id/textViewHeaderClassificacao"
+        style="@style/styleLabelTituloResultado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/labelTextViewHeaderClassificacao"
+        app:layout_constraintEnd_toEndOf="@+id/textViewResultadoPesoExcesso"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/textViewResultadoPesoExcesso"
+        app:layout_constraintTop_toBottomOf="@+id/textViewResultadoPesoExcesso" />
+
+    <TextView
+        android:id="@+id/textViewResultadoClassificacao"
+        style="@style/styleLabelNormal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="@+id/textViewHeaderClassificacao"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/textViewHeaderClassificacao"
+        app:layout_constraintTop_toBottomOf="@+id/textViewHeaderClassificacao" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

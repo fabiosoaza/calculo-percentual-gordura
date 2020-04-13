@@ -31,12 +31,14 @@ class ExpressoElementUtils {
 
         fun preencherEditText(elementId: Int, valor: String) {
             val element = findElementById(elementId)
+            element.perform(ViewActions.scrollTo())
             verificarElementoEstaSendoExibido(element)
             element.perform(ViewActions.replaceText(valor), ViewActions.closeSoftKeyboard())
         }
 
         fun marcarRadio(elementId: Int) {
             val element = findElementById(elementId)
+            element.perform(ViewActions.scrollTo())
             verificarElementoEstaSendoExibido(element)
             element.perform(ViewActions.click())
         }
@@ -56,6 +58,7 @@ class ExpressoElementUtils {
 
         fun verificarErroTexto(elementId: Int, texto: String) {
             val element = findElementById(elementId)
+            element.perform(ViewActions.scrollTo())
             verificarElementoEstaSendoExibido(element)
             element.check(matches(hasTextInputLayoutErrorText(texto)))
         }
