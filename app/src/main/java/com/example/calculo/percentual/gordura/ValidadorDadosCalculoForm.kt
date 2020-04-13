@@ -4,7 +4,6 @@ class ValidadorDadosCalculoForm(private var form: DadosCalculoForm) {
 
 
     fun validar(): Boolean{
-        form.limparMensagemErro()
         return validarCamposBasicos() &&
                 if (form.isSexoMasculino()) this.validarCamposMasculino() else this.validarCamposFeminino()
     }

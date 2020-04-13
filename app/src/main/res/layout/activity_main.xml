@@ -1,178 +1,217 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:fitsSystemWindows="true"
+    android:id="@+id/scrollForm"
+    >
 
-    <EditText
-        android:id="@+id/editSubescapular"
-        style="@style/styleEditText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:ems="10"
-        android:hint="@string/labelSubescapular"
-        android:inputType="number"
-        app:layout_constraintEnd_toEndOf="@+id/editTriceps"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/editTriceps"
-        app:layout_constraintTop_toBottomOf="@+id/editTriceps"
-        tools:text="@string/labelSubescapular" />
 
-    <EditText
-        android:id="@+id/editCoxa"
-        style="@style/styleEditText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:ems="10"
-        android:hint="@string/labelCoxa"
-        android:inputType="number"
-        app:layout_constraintEnd_toEndOf="@+id/editSubescapular"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/editSubescapular"
-        app:layout_constraintTop_toBottomOf="@+id/editSubescapular"
-        tools:text="@string/labelCoxa" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constarintLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="1000dp"
+        android:paddingLeft="24dp"
+        android:paddingTop="24dp"
+        android:paddingRight="24dp"
+        android:paddingBottom="24dp"
+        tools:context=".MainActivity">
 
-    <EditText
-        android:id="@+id/editTriceps"
-        style="@style/styleEditText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:ems="10"
-        android:hint="@string/labelTriceps"
-        android:inputType="number"
-        app:layout_constraintEnd_toEndOf="@+id/radioGoupSexo"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/radioGoupSexo"
-        app:layout_constraintTop_toBottomOf="@+id/radioGoupSexo"
-        tools:text="@string/labelTriceps" />
 
-    <EditText
-        android:id="@+id/editAbdominal"
-        style="@style/styleEditText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:ems="10"
-        android:hint="@string/labelAbnominal"
-        android:inputType="number"
-        app:layout_constraintEnd_toEndOf="@+id/editCoxa"
-        app:layout_constraintStart_toStartOf="@+id/editCoxa"
-        app:layout_constraintTop_toBottomOf="@+id/editCoxa"
-        tools:text="@string/labelAbnominal" />
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutEditIdade"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/labelIdade"
+            app:errorEnabled="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-    <EditText
-        android:id="@+id/textViewMessageError"
-        style="@style/styleEditText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="@string/labelAbnominal"
-        android:inputType="number"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnCalcular"
-        tools:text='""' />
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editIdade"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number" />
 
-    <Button
-        android:id="@+id/btnCalcular"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="@string/labelCalcularPercentual"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/editAbdominal"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/editAbdominal"
-        app:layout_constraintTop_toBottomOf="@+id/editAbdominal"
-        app:layout_constraintVertical_bias="0.194" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-    <EditText
-        android:id="@+id/editIdade"
-        style="@style/styleEditText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:ems="10"
-        android:hint="@string/labelIdade"
-        android:inputType="number"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/editPeso"
-        style="@style/styleEditText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:ems="10"
-        android:hint="@string/labelPeso"
-        android:inputType="numberDecimal"
-        app:layout_constraintEnd_toEndOf="@+id/editIdade"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/editIdade"
-        app:layout_constraintTop_toBottomOf="@+id/editIdade"
-        tools:text="@string/labelPeso" />
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutEditPeso"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/labelPeso"
+            app:errorEnabled="true"
+            app:layout_constraintEnd_toEndOf="@+id/layoutEditIdade"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/layoutEditIdade"
+            app:layout_constraintTop_toBottomOf="@+id/layoutEditIdade">
 
-    <TextView
-        android:id="@+id/labelSexo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="@string/labelSexo"
-        app:layout_constraintEnd_toEndOf="@+id/editSupra"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/editSupra"
-        app:layout_constraintTop_toBottomOf="@+id/editSupra" />
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editPeso"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal" />
 
-    <EditText
-        android:id="@+id/editSupra"
-        style="@style/styleEditText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:ems="10"
-        android:hint="@string/labelSupraIliaca"
-        android:inputType="number"
-        app:layout_constraintEnd_toEndOf="@+id/editPeso"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/editPeso"
-        app:layout_constraintTop_toBottomOf="@+id/editPeso"
-        tools:text="@string/labelSupraIliaca" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-    <RadioGroup
-        android:id="@+id/radioGoupSexo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:checkedButton="@id/radioMasculino"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="@+id/labelSexo"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/labelSexo"
-        app:layout_constraintTop_toBottomOf="@+id/labelSexo">
 
-        <RadioButton
-            android:id="@+id/radioMasculino"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutEditSupra"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/labelSupraIliaca"
+            app:errorEnabled="true"
+            app:layout_constraintEnd_toEndOf="@+id/layoutEditPeso"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/layoutEditPeso"
+            app:layout_constraintTop_toBottomOf="@+id/layoutEditPeso">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editSupra"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <TextView
+            android:id="@+id/labelSexo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/labelSexoMasculino"
-            tools:layout_editor_absoluteX="56dp"
-            tools:layout_editor_absoluteY="136dp" />
+            android:text="@string/labelSexo"
+            app:layout_constraintEnd_toEndOf="@+id/layoutEditSupra"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/layoutEditSupra"
+            app:layout_constraintTop_toBottomOf="@+id/layoutEditSupra" />
 
-        <RadioButton
-            android:id="@+id/radioFeminino"
+
+        <RadioGroup
+            android:id="@+id/radioGoupSexo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/labelSexoFeminino" />
+            android:checkedButton="@id/radioMasculino"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="@+id/labelSexo"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/labelSexo"
+            app:layout_constraintTop_toBottomOf="@+id/labelSexo">
 
-    </RadioGroup>
+            <RadioButton
+                android:id="@+id/radioMasculino"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/labelSexoMasculino"
+                tools:layout_editor_absoluteX="56dp"
+                tools:layout_editor_absoluteY="136dp" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+            <RadioButton
+                android:id="@+id/radioFeminino"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/labelSexoFeminino" />
+
+        </RadioGroup>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutEditTriceps"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/labelTriceps"
+            app:errorEnabled="true"
+            app:layout_constraintEnd_toEndOf="@+id/radioGoupSexo"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/radioGoupSexo"
+            app:layout_constraintTop_toBottomOf="@+id/radioGoupSexo">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTriceps"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutEditAbdominal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/labelAbnominal"
+            app:errorEnabled="true"
+            app:layout_constraintEnd_toEndOf="@+id/layoutEditTriceps"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/layoutEditTriceps"
+            app:layout_constraintTop_toBottomOf="@+id/layoutEditTriceps">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editAbdominal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutEditSubescapular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/labelSubescapular"
+            app:errorEnabled="true"
+            app:layout_constraintEnd_toEndOf="@+id/layoutEditAbdominal"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/layoutEditAbdominal"
+            app:layout_constraintTop_toBottomOf="@+id/layoutEditAbdominal">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editSubescapular"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutEditCoxa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/labelCoxa"
+            app:errorEnabled="true"
+            app:layout_constraintEnd_toEndOf="@+id/layoutEditSubescapular"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/layoutEditSubescapular"
+            app:layout_constraintTop_toBottomOf="@+id/layoutEditSubescapular">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editCoxa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/btnCalcular"
+            style="@style/styleContainedButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/labelCalcularPercentual"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layoutEditCoxa" />
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

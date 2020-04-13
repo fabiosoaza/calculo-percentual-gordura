@@ -1,11 +1,9 @@
 package com.example.calculo.percentual.gordura
 
-import android.view.View
-import android.widget.EditText
-import android.widget.RadioButton
-import android.widget.RadioGroup
-import android.widget.TextView
+import android.widget.*
 import androidx.activity.ComponentActivity
+import com.example.calculo.percentual.gordura.utils.UIUtils
+import com.google.android.material.textfield.TextInputLayout
 import java.text.MessageFormat
 
 class DadosCalculoForm(private var view: ComponentActivity) {
@@ -20,8 +18,16 @@ class DadosCalculoForm(private var view: ComponentActivity) {
     private val viewAbdominal: EditText = view.findViewById<EditText>(R.id.editAbdominal)
     private val viewSubescapular: EditText = view.findViewById<EditText>(R.id.editSubescapular)
     private val viewCoxa: EditText = view.findViewById<EditText>(R.id.editCoxa)
+    private val viewScroll: ScrollView = view.findViewById<ScrollView>(R.id.scrollForm)
 
-    private val textViewMensagem: TextView = view.findViewById<TextView>(R.id.textViewMessageError)
+    private val layoutViewIdade: TextInputLayout = view.findViewById<TextInputLayout>(R.id.layoutEditIdade)
+    private val layoutViewPeso: TextInputLayout = view.findViewById<TextInputLayout>(R.id.layoutEditPeso)
+    private val layoutViewSupra: TextInputLayout = view.findViewById<TextInputLayout>(R.id.layoutEditSupra)
+    private val layoutViewTriceps: TextInputLayout = view.findViewById<TextInputLayout>(R.id.layoutEditTriceps)
+    private val layoutViewAbdominal: TextInputLayout = view.findViewById<TextInputLayout>(R.id.layoutEditAbdominal)
+    private val layoutViewSubescapular: TextInputLayout = view.findViewById<TextInputLayout>(R.id.layoutEditSubescapular)
+    private val layoutViewCoxa: TextInputLayout = view.findViewById<TextInputLayout>(R.id.layoutEditCoxa)
+
     private val nomeCampoIdade = view.getString(R.string.labelIdade)
     private val nomeCampoPeso = view.getString(R.string.labelPeso)
     private val nomeCampoSupra = view.getString(R.string.labelSupraIliaca)
@@ -58,54 +64,44 @@ class DadosCalculoForm(private var view: ComponentActivity) {
 
     fun exibirMensagemErroIdade(){
         val mensagem = formatarMensagem(nomeCampoIdade)
-        exibirMensagemErro(viewIdade, textViewMensagem, mensagem)
+        exibirMensagemErro(viewIdade, layoutViewIdade, mensagem)
     }
 
     fun exibirMensagemErroPeso(){
         val mensagem = formatarMensagem(nomeCampoPeso)
-        exibirMensagemErro(viewPeso, textViewMensagem, mensagem)
+        exibirMensagemErro(viewPeso, layoutViewPeso, mensagem)
     }
 
     fun exibirMensagemErroSupra(){
         val mensagem = formatarMensagem(nomeCampoSupra)
-        exibirMensagemErro(viewSupra, textViewMensagem, mensagem)
+        exibirMensagemErro(viewSupra, layoutViewSupra, mensagem)
     }
 
     fun exibirMensagemErroTriceps(){
         val mensagem = formatarMensagem(nomeCampoTriceps)
-        exibirMensagemErro(viewTriceps, textViewMensagem, mensagem)
+        exibirMensagemErro(viewTriceps, layoutViewTriceps, mensagem)
     }
 
     fun exibirMensagemErroAbdominal(){
         val mensagem = formatarMensagem(nomeCampoAbdominal)
-        exibirMensagemErro(viewAbdominal, textViewMensagem, mensagem)
+        exibirMensagemErro(viewAbdominal, layoutViewAbdominal, mensagem)
     }
 
     fun exibirMensagemErroSubescapular(){
         val mensagem = formatarMensagem(nomeCampoSubscapular)
-        exibirMensagemErro(viewSubescapular, textViewMensagem, mensagem)
+        exibirMensagemErro(viewSubescapular, layoutViewSubescapular, mensagem)
     }
 
     fun exibirMensagemErroCoxa(){
         val mensagem = formatarMensagem(nomeCampoCoxa)
-        exibirMensagemErro(viewCoxa, textViewMensagem, mensagem)
+        exibirMensagemErro(viewCoxa, layoutViewCoxa, mensagem)
     }
 
-    fun limparMensagemErro() {
-        limparMensagemErro(this.textViewMensagem)
 
-    }
-
-    private fun exibirMensagemErro(editText: EditText, textViewMessage: TextView, mensagem: String ) {
-        textViewMessage.text = mensagem
-        textViewMessage.visibility = View.VISIBLE
+    private fun exibirMensagemErro(editText: EditText, textViewMessage: TextInputLayout, mensagem: String ) {
+        textViewMessage.error = mensagem
+        UIUtils.scrollVerticalyToElement(viewScroll, editText)
         editText.requestFocus();
-    }
-
-
-    private fun limparMensagemErro(textViewMessage:TextView){
-        textViewMessage.visibility = View.INVISIBLE
-        textViewMessage.text = ""
     }
 
     private fun formatarMensagem(campo:String) : String{

@@ -1,5 +1,6 @@
 package com.example.calculo.percentual.gordura
 
+import android.view.View
 import androidx.test.InstrumentationRegistry
 import androidx.test.espresso.Espresso
 import androidx.test.espresso.NoMatchingViewException
@@ -8,8 +9,13 @@ import androidx.test.espresso.action.ViewActions
 import androidx.test.espresso.assertion.ViewAssertions.matches
 import androidx.test.espresso.matcher.ViewMatchers
 import androidx.test.espresso.matcher.ViewMatchers.withText
+import com.google.android.material.textfield.TextInputLayout
+import org.hamcrest.Description
+import org.hamcrest.Matcher
 import org.hamcrest.Matchers
 import org.hamcrest.Matchers.not
+import org.hamcrest.TypeSafeMatcher
+
 
 class ExpressoElementUtils {
 
@@ -37,8 +43,9 @@ class ExpressoElementUtils {
 
         fun clicarBotao(elementId: Int) {
             val element = findElementById(elementId)
+            element.perform(ViewActions.scrollTo())
             verificarElementoEstaSendoExibido(element)
-            element.perform(ViewActions.click())
+            element.perform(ViewActions.closeSoftKeyboard(), ViewActions.click())
         }
 
         fun verificarTextoElemento(elementId: Int, texto: String) {
@@ -47,9 +54,12 @@ class ExpressoElementUtils {
             element.check(matches(withText(texto)))
         }
 
-        fun verificarElementoEstaSendoExibido(elementId:Int) {
-            verificarElementoEstaSendoExibido( findElementById(elementId))
+        fun verificarErroTexto(elementId: Int, texto: String) {
+            val element = findElementById(elementId)
+            verificarElementoEstaSendoExibido(element)
+            element.check(matches(hasTextInputLayoutErrorText(texto)))
         }
+
 
         fun verificarElementoNaoExiste(elementId:Int) {
             try {
@@ -69,8 +79,30 @@ class ExpressoElementUtils {
             element.check(matches(ViewMatchers.isDisplayed()))
         }
 
+        /**
+         * Custom matcher para as mensagens de erro dos text input layout
+         * */
+        private fun hasTextInputLayoutErrorText(expectedErrorText: String): Matcher<View> {
+            return object : TypeSafeMatcher<View>() {
+                override fun matchesSafely(view: View): Boolean {
+                    if (view !is TextInputLayout) {
+                        return false
+                    }
+                    val error = (view as TextInputLayout).error ?: return false
+                    val hint = error.toString()
+                    return expectedErrorText == hint
+                }
+
+                override fun describeTo(description: Description?) {}
+            }
+        }
+
 
 
     }
+
+
+
+
 
 }

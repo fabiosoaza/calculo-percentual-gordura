@@ -17,7 +17,7 @@
     <string name="labelTextViewHeaderDensidadeCorporal">Densidade Corporal</string>
     <string name="labelTextViewHeaderMassaMagra">Massa Magra (kg)</string>
     <string name="labelTextViewHeaderGorda">Massa Gorda (kg)</string>
-    <string name="labelTextViewHeaderPercentualGordura">% Gordura</string>
+    <string name="labelTextViewHeaderPercentualGordura">%Gordura</string>
     <string name="labelTextViewHeaderPercentualMassaMagra">%Massa Magra</string>
     <string name="labelTextViewHeaderPesoIdeal">Peso Ideal</string>
     <string name="labelTextViewHeaderPesoEmExcesso">Peso em Excesso</string>

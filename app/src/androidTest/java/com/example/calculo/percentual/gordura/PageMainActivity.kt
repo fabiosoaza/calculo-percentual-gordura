@@ -12,7 +12,7 @@ class PageMainActivity {
     }
 
     fun verificarMensagemValidacaoIdade() {
-        verificarMensagemErroCampo(ExpressoElementUtils.getString(R.string.labelIdade), R.id.textViewMessageError)
+        verificarMensagemErroCampo(ExpressoElementUtils.getString(R.string.labelIdade), R.id.layoutEditIdade)
     }
 
     fun informarPeso(medida: BigDecimal) {
@@ -21,7 +21,7 @@ class PageMainActivity {
     }
 
     fun verificarMensagemValidacaoPeso() {
-        verificarMensagemErroCampo(ExpressoElementUtils.getString(R.string.labelPeso), R.id.textViewMessageError)
+        verificarMensagemErroCampo(ExpressoElementUtils.getString(R.string.labelPeso), R.id.layoutEditPeso)
     }
 
     fun informarSupraIliaca(medida: BigDecimal) {
@@ -30,7 +30,7 @@ class PageMainActivity {
     }
 
     fun verificarMensagemValidacaoSupraIliaca() {
-        verificarMensagemErroCampo(ExpressoElementUtils.getString(R.string.labelSupraIliaca), R.id.textViewMessageError)
+        verificarMensagemErroCampo(ExpressoElementUtils.getString(R.string.labelSupraIliaca), R.id.layoutEditSupra)
     }
 
     fun selecionarSexoMasculino() {
@@ -47,7 +47,7 @@ class PageMainActivity {
     }
 
     fun verificarMensagemValidacaoTriceps() {
-        verificarMensagemErroCampo(ExpressoElementUtils.getString(R.string.labelTriceps), R.id.textViewMessageError)
+        verificarMensagemErroCampo(ExpressoElementUtils.getString(R.string.labelTriceps), R.id.layoutEditTriceps)
     }
 
     fun informarSubscapular(medida: BigDecimal) {
@@ -56,7 +56,7 @@ class PageMainActivity {
     }
 
     fun verificarMensagemValidacaoSubscapular() {
-        verificarMensagemErroCampo(ExpressoElementUtils.getString(R.string.labelSubescapular), R.id.textViewMessageError)
+        verificarMensagemErroCampo(ExpressoElementUtils.getString(R.string.labelSubescapular), R.id.layoutEditSubescapular)
     }
 
     fun informarCoxa(medida: BigDecimal) {
@@ -65,7 +65,7 @@ class PageMainActivity {
     }
 
     fun verificarMensagemValidacaoCoxa() {
-        verificarMensagemErroCampo(ExpressoElementUtils.getString(R.string.labelCoxa), R.id.textViewMessageError)
+        verificarMensagemErroCampo(ExpressoElementUtils.getString(R.string.labelCoxa), R.id.layoutEditCoxa)
     }
 
 
@@ -75,7 +75,7 @@ class PageMainActivity {
     }
 
     fun verificarMensagemValidacaoAbdominal() {
-        verificarMensagemErroCampo(ExpressoElementUtils.getString(R.string.labelAbnominal), R.id.textViewMessageError)
+        verificarMensagemErroCampo(ExpressoElementUtils.getString(R.string.labelAbnominal), R.id.layoutEditAbdominal)
     }
 
     fun calcular() {
@@ -86,11 +86,10 @@ class PageMainActivity {
         return FormatUtils.formatarValor(medida)
     }
 
-    private fun verificarMensagemErroCampo(fieldName:String, textViewMensagemId:Int){
-        ExpressoElementUtils.verificarElementoEstaSendoExibido(textViewMensagemId)
+    private fun verificarMensagemErroCampo(fieldName:String, textLayoutErroId:Int){
         val texto = ExpressoElementUtils.getString(R.string.labelMessageErrorMandatory)
         val mensagem = MessageFormat.format(texto, fieldName)
-        ExpressoElementUtils.verificarTextoElemento(textViewMensagemId, mensagem)
+        ExpressoElementUtils.verificarErroTexto(textLayoutErroId, mensagem)
     }
 
 
