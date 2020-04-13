@@ -13,8 +13,9 @@
     <string name="labelSubescapular">Subscapular(cm)</string>
     <string name="labelCoxa">Thigh(cm)</string>
     <string name="labelCalcularPercentual">Calculate</string>
-    <string name="labelResultadoPercentualGordura">Results</string>
+    <string name="labelResultadoPercentualGordura">Your Results</string>
     <string name="labelTextViewHeaderDensidadeCorporal">Body Density</string>
+    <string name="labelTextViewHeaderComposicaoCorporal">Body Composition</string>
     <string name="labelTextViewHeaderMassaMagra">Lean Weight(kg)</string>
     <string name="labelTextViewHeaderGorda">Fat Weight (kg)</string>
     <string name="labelTextViewHeaderPercentualGordura">% Fat</string>
@@ -28,5 +29,6 @@
     <string name="labelClassificaoAcimaMedia">Overweight</string>
     <string name="labelClassificacaoObeso">Obese</string>
     <string name="labelMessageErrorMandatory">Field {0} is required</string>
-
+    <string name="labelBotaoVoltar">Close</string>
+    <string name="labelTituloFormTeste">Fat Percentage - Guedes</string>
 </resources>

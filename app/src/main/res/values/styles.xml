@@ -1,14 +1,35 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.MaterialComponents.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.DarkActionBar.Bridge">
         <!-- Customize your theme here. -->
-       <!-- <item name="colorPrimary">@color/colorPrimary</item>
+
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorSecondary">@color/colorSecondary</item>
+
+        <!-- <item name="colorPrimary">@color/colorPrimary</item>
+
+
+
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
         -->
       <item name="textInputStyle">@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox</item>
 
+    </style>
+
+    <style name="styleHeaderResultado" parent="@style/Widget.MaterialComponents.TextView">
+        <item name="android:textAppearance">?attr/textAppearanceBody2</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+    </style>
+
+    <style name="styleValorResultado" parent="@style/Widget.MaterialComponents.TextView">
+        <item name="android:textAppearance">?attr/textAppearanceBody2</item>
+        <item name="android:textColor">@color/colorSecondary</item>
+    </style>
+
+    <style name="styleTituloSecao" parent="@style/Widget.MaterialComponents.TextView">
+        <item name="android:textAppearance">?attr/textAppearanceHeadline6</item>
     </style>
 
     <style name="styleTituloApp" parent="@android:style/Widget.TextView">

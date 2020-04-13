@@ -14,22 +14,37 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingLeft="24dp"
-        android:paddingTop="24dp"
+        android:paddingTop="16dp"
         android:paddingRight="24dp"
         android:paddingBottom="24dp"
         tools:context=".MainActivity">
+
+
+        <TextView
+            android:id="@+id/textViewTituloForm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/labelTituloFormTeste"
+            style="@style/styleTituloSecao"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
 
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/layoutEditIdade"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="16dp"
             android:hint="@string/labelIdade"
             app:errorEnabled="true"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintEnd_toEndOf="@+id/textViewTituloForm"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/textViewTituloForm"
+            app:layout_constraintTop_toBottomOf="@+id/textViewTituloForm"
+            >
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/editIdade"
@@ -97,7 +112,7 @@
         <RadioGroup
             android:id="@+id/radioGoupSexo"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:checkedButton="@id/radioMasculino"
             android:orientation="horizontal"
             app:layout_constraintEnd_toEndOf="@+id/labelSexo"

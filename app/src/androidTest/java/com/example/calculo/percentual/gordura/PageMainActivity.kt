@@ -8,6 +8,7 @@ class PageMainActivity {
 
     fun informarIdade(medida: BigDecimal) {
         val valor = formatarMedida(medida)
+        ExpressoElementUtils.scrollToElement(R.id.editIdade)
         ExpressoElementUtils.preencherEditText(R.id.editIdade, valor)
     }
 
@@ -17,6 +18,7 @@ class PageMainActivity {
 
     fun informarPeso(medida: BigDecimal) {
         val valor = formatarMedida(medida)
+        ExpressoElementUtils.scrollToElement(R.id.editPeso)
         ExpressoElementUtils.preencherEditText(R.id.editPeso, valor)
     }
 
@@ -26,6 +28,7 @@ class PageMainActivity {
 
     fun informarSupraIliaca(medida: BigDecimal) {
         val valor = formatarMedida(medida)
+        ExpressoElementUtils.scrollToElement(R.id.editSupra)
         ExpressoElementUtils.preencherEditText(R.id.editSupra, valor)
     }
 
@@ -34,15 +37,18 @@ class PageMainActivity {
     }
 
     fun selecionarSexoMasculino() {
+        ExpressoElementUtils.scrollToElement(R.id.radioMasculino)
         ExpressoElementUtils.marcarRadio(R.id.radioMasculino)
     }
 
     fun selecionarSexoFeminino() {
+        ExpressoElementUtils.scrollToElement(R.id.radioFeminino)
         ExpressoElementUtils.marcarRadio(R.id.radioFeminino)
     }
 
     fun informarTriceps(medida: BigDecimal) {
         val valor = formatarMedida(medida)
+        ExpressoElementUtils.scrollToElement(R.id.editTriceps)
         ExpressoElementUtils.preencherEditText(R.id.editTriceps, valor)
     }
 
@@ -52,6 +58,7 @@ class PageMainActivity {
 
     fun informarSubscapular(medida: BigDecimal) {
         val valor = formatarMedida(medida)
+        ExpressoElementUtils.scrollToElement(R.id.editSubescapular)
         ExpressoElementUtils.preencherEditText(R.id.editSubescapular, valor)
     }
 
@@ -61,6 +68,7 @@ class PageMainActivity {
 
     fun informarCoxa(medida: BigDecimal) {
         val valor = formatarMedida(medida)
+        ExpressoElementUtils.scrollToElement(R.id.editCoxa)
         ExpressoElementUtils.preencherEditText(R.id.editCoxa, valor)
     }
 
@@ -71,6 +79,7 @@ class PageMainActivity {
 
     fun informarAbdominal(medida: BigDecimal) {
         val valor = formatarMedida(medida)
+        ExpressoElementUtils.scrollToElement(R.id.editAbdominal)
         ExpressoElementUtils.preencherEditText(R.id.editAbdominal, valor)
     }
 
@@ -79,6 +88,7 @@ class PageMainActivity {
     }
 
     fun calcular() {
+        ExpressoElementUtils.scrollToElement(R.id.btnCalcular)
         ExpressoElementUtils.clicarBotao(R.id.btnCalcular)
     }
 
@@ -89,6 +99,7 @@ class PageMainActivity {
     private fun verificarMensagemErroCampo(fieldName:String, textLayoutErroId:Int){
         val texto = ExpressoElementUtils.getString(R.string.labelMessageErrorMandatory)
         val mensagem = MessageFormat.format(texto, fieldName)
+        ExpressoElementUtils.scrollToElement(textLayoutErroId)
         ExpressoElementUtils.verificarErroTexto(textLayoutErroId, mensagem)
     }
 

@@ -13,8 +13,10 @@
     <string name="labelSubescapular">Subescapular(cm)</string>
     <string name="labelCoxa">Coxa(cm)</string>
     <string name="labelCalcularPercentual">Calcular</string>
-    <string name="labelResultadoPercentualGordura">Resultado</string>
+    <string name="labelResultadoPercentualGordura">Resultados do Teste</string>
+    <string name="labelTituloFormTeste">Percentual de Gordura - Guedes</string>
     <string name="labelTextViewHeaderDensidadeCorporal">Densidade Corporal</string>
+    <string name="labelTextViewHeaderComposicaoCorporal">Composição Corporal</string>
     <string name="labelTextViewHeaderMassaMagra">Massa Magra (kg)</string>
     <string name="labelTextViewHeaderGorda">Massa Gorda (kg)</string>
     <string name="labelTextViewHeaderPercentualGordura">%Gordura</string>
@@ -28,6 +30,7 @@
     <string name="labelClassificaoAcimaMedia">Acima da Média</string>
     <string name="labelClassificacaoObeso">Obeso</string>
     <string name="labelMessageErrorMandatory">O campo {0} deve ser preenchido</string>
+    <string name="labelBotaoVoltar">Voltar</string>
 
 
 

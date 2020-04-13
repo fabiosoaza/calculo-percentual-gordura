@@ -1,6 +1,7 @@
 package com.example.calculo.percentual.gordura
 
 import android.os.Bundle
+import android.view.View
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.example.calculo.percentual.gordura.calculadora.CalculadoraResultado
@@ -8,6 +9,7 @@ import com.example.calculo.percentual.gordura.calculadora.DadosCalculo
 import com.example.calculo.percentual.gordura.calculadora.Resultado
 import com.example.calculo.percentual.gordura.utils.ClassificacaoUtils
 import com.example.calculo.percentual.gordura.utils.FormatUtils
+import kotlinx.android.synthetic.main.activity_resultado.*
 import java.math.BigDecimal
 
 class ResultadoActivity : AppCompatActivity() {
@@ -16,6 +18,10 @@ class ResultadoActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_resultado)
         atualizarResultados(dadosCalculo())
+        btnFecharResultados.setOnClickListener(View.OnClickListener {
+            finish()
+        }
+        )
     }
 
     private fun atualizarResultados(dadosCalculo: DadosCalculo) {
