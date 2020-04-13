@@ -19,16 +19,17 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:orientation="vertical"
-        android:padding="8dp">
 
-    <TextView
-        android:id="@+id/textviewResultado"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/labelResultadoPercentualGordura"
-        style="@style/styleTituloSecao"/>
+        android:layout_margin="6dp">
+
+        <TextView
+            android:id="@+id/textviewResultado"
+            style="@style/styleTituloSecao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/labelResultadoPercentualGordura" />
 
     </LinearLayout>
 
@@ -42,7 +43,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:padding="16dp">
+            android:padding="15dp">
 
 
             <TextView
@@ -128,7 +129,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:padding="16dp">
+            android:padding="15dp">
 
             <TextView
                 android:id="@+id/titleComposicaoCorporal"
@@ -249,7 +250,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="8dp">
+        android:layout_margin="3dp"
+        >
 
         <Button
             android:id="@+id/btnFecharResultados"
