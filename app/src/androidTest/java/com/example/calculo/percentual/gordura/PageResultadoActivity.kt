@@ -8,6 +8,7 @@ import com.example.calculo.percentual.gordura.utils.ClassificacaoUtils
 import com.example.calculo.percentual.gordura.utils.FormatUtils
 import org.hamcrest.Matchers.not
 import java.math.BigDecimal
+import java.text.MessageFormat
 
 class PageResultadoActivity {
 
@@ -52,9 +53,12 @@ class PageResultadoActivity {
     }
 
     fun verificarPesoExcesso(medida: BigDecimal) {
-        val valor = formatarValor(medida)
+        val context = InstrumentationRegistry.getTargetContext()
+        val valor = formatarValor(medida.abs())
         ExpressoElementUtils.scrollToElement(R.id.textViewResultadoPesoExcesso)
-        ExpressoElementUtils.verificarTextoElemento(R.id.textViewResultadoPesoExcesso, valor)
+        val template = if (medida.signum() == -1) context.getString(R.string.templateValorResultadoAbaixoPesoIdeal) else context.getString(R.string.templateValorResultadoAbaixoPesoIdeal)
+        val texto = MessageFormat.format(template, valor)
+        ExpressoElementUtils.verificarTextoElemento(R.id.textViewResultadoPesoExcesso, texto)
     }
 
     fun verificarClassificacao(classificacao:ClassificacaoPercentualGordura) {

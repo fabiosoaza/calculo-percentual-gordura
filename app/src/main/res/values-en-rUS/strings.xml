@@ -6,22 +6,22 @@
     <string name="labelSexoMasculino">Male</string>
     <string name="labelSexoFeminino">Female</string>
     <string name="labelIdade">Age</string>
-    <string name="labelPeso">Weight(kg)</string>
-    <string name="labelTriceps">Tricep(cm)</string>
-    <string name="labelSupraIliaca">Suprailiac(cm)</string>
-    <string name="labelAbnominal">Abdominal(cm)</string>
-    <string name="labelSubescapular">Subscapular(cm)</string>
-    <string name="labelCoxa">Thigh(cm)</string>
+    <string name="labelPeso">Weight</string>
+    <string name="labelTriceps">Tricep</string>
+    <string name="labelSupraIliaca">Suprailiac</string>
+    <string name="labelAbnominal">Abdominal</string>
+    <string name="labelSubescapular">Subscapular</string>
+    <string name="labelCoxa">Thigh</string>
     <string name="labelCalcularPercentual">Calculate</string>
     <string name="labelResultadoPercentualGordura">Your Results</string>
     <string name="labelTextViewHeaderDensidadeCorporal">Body Density</string>
-    <string name="labelTextViewHeaderComposicaoCorporal">Body Composition</string>
+    <string name="labelTextTitleResultTestComposicaoCorporal">Body Composition</string>
     <string name="labelTextViewHeaderMassaMagra">Lean Weight(kg)</string>
-    <string name="labelTextViewHeaderGorda">Fat Weight (kg)</string>
-    <string name="labelTextViewHeaderPercentualGordura">% Fat</string>
-    <string name="labelTextViewHeaderPercentualMassaMagra">%Lean Body Mass</string>
-    <string name="labelTextViewHeaderPesoIdeal">Ideal Weight</string>
-    <string name="labelTextViewHeaderPesoEmExcesso">Overweight</string>
+    <string name="labelTextViewHeaderGorda">Fat Weight(kg)</string>
+    <string name="labelTextViewHeaderPercentualGordura">Fat Percentage(%)</string>
+    <string name="labelTextViewHeaderPercentualMassaMagra">Lean Body Mass Percentage(%)</string>
+    <string name="labelTextViewHeaderPesoIdeal">Ideal Weight(kg)</string>
+    <string name="labelTextViewHeaderPesoEmExcesso">Overweight(kg)</string>
     <string name="labelTextViewHeaderClassificacao">Classification</string>
     <string name="labelClassificaoMagro">Essential Fat</string>
     <string name="labelClassificaoAbaixoMedia">Athletic</string>
@@ -31,4 +31,41 @@
     <string name="labelMessageErrorMandatory">Field {0} is required</string>
     <string name="labelBotaoVoltar">Close</string>
     <string name="labelTituloFormTeste">Fat Percentage - Guedes</string>
+
+    <string name="contentDescriptionSexoMasculino">Male</string>
+    <string name="contentDescriptionSexoFeminino">Female</string>
+
+
+    <string name="contentDescriptionPeso">Weight(in kilos)</string>
+    <string name="contentDescriptionTriceps">Tricep(in centimeters)</string>
+    <string name="contentDescriptionSupraIliaca">Suprailiac(in centimeters)</string>
+    <string name="contentDescriptionAbnominal">Abdominal(in centimeters)</string>
+    <string name="contentDescriptionSubescapular">Subscapular(in centimeters)</string>
+    <string name="contentDescriptionCoxa">Thigh(in centimeters)</string>
+
+    <string name="contentDescriptionCalcularPercentual">Calculate Fat Percentage</string>
+    <string name="contentDescriptionTituloFormTeste">Percentage Body Fat Test using Guedes Method</string>
+
+    <string name="contentDescriptionSexo">Choose sex</string>
+
+
+    <string name="contentDescriptionResultadosTestePercentualGordura">Results of body fat percentage test</string>
+    <string name="contentDescriptionResultadosTesteComposicaoCorporal">Results of body composition test</string>
+    <string name="contentDescriptionResultadoDensidadeCorporal">Your body density is {0}</string>
+    <string name="contentDescriptionResultadoPercentualGordura">Your body fat percentage is {0} percent</string>
+    <string name="contentDescriptionResultadoClassificacao">Your body fat percentage is classified as {0}</string>
+    <string name="contentDescriptionResultadoMassaGorda">Your fat weight is {0} kilos</string>
+    <string name="contentDescriptionResultadoMassaMagra">Your lean body mass is {0} kilos</string>
+    <string name="contentDescriptionResultadoPercentualMassaMagra">Your lean body mass is of {0} percent</string>
+    <string name="contentDescriptionResultadoPesoIdeal">Your ideal weight is {0} kilos</string>
+    <string name="contentDescriptionResultadoPesoExcessoAbaixoIdeal">You are {0} kilos under your ideal weight</string>
+    <string name="contentDescriptionResultadoPesoExcessoAcimaIdeal">You are {0} kilos over your ideal weight</string>
+
+    <string name="labelTextTitleResultTestPercentualGordura">Fat Percentage</string>
+
+    <string name="templateValorResultadoAbaixoPesoIdeal">{0}(kg) underweight</string>
+    <string name="templateValorResultadoAcimaPesoIdeal">{0}(kg) overweight</string>
+
+
+
 </resources>

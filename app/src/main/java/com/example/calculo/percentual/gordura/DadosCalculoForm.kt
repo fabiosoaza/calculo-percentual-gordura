@@ -1,5 +1,6 @@
 package com.example.calculo.percentual.gordura
 
+import android.view.accessibility.AccessibilityEvent
 import android.widget.*
 import androidx.activity.ComponentActivity
 import com.example.calculo.percentual.gordura.utils.UIUtils
@@ -101,6 +102,7 @@ class DadosCalculoForm(private var view: ComponentActivity) {
     private fun exibirMensagemErro(editText: EditText, textViewMessage: TextInputLayout, mensagem: String ) {
         textViewMessage.error = mensagem
         UIUtils.scrollVerticalyToElement(viewScroll, editText)
+        editText.sendAccessibilityEvent(AccessibilityEvent.TYPE_VIEW_FOCUSED)
         editText.requestFocus();
     }
 

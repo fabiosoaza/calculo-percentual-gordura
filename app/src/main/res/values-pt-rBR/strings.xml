@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name" translatable="false">Teste de Percentual de Gordura</string>
-    <string name="labelNumeroDobras">Número de Dobras</string>
+    <string name="labelNumeroDobras">Número de Dobras Cutâneas</string>
     <string name="labelSexo">Sexo</string>
     <string name="labelSexoMasculino">Masculino</string>
     <string name="labelSexoFeminino">Feminino</string>
     <string name="labelIdade">Idade</string>
-    <string name="labelPeso">Peso(kg)</string>
-    <string name="labelTriceps">Tríceps(cm)</string>
-    <string name="labelSupraIliaca">Supra-ilíaca(cm)</string>
-    <string name="labelAbnominal">Abdominal(cm)</string>
-    <string name="labelSubescapular">Subescapular(cm)</string>
-    <string name="labelCoxa">Coxa(cm)</string>
+    <string name="labelPeso">Peso</string>
+    <string name="labelTriceps">Tríceps</string>
+    <string name="labelSupraIliaca">Supra-ilíaca</string>
+    <string name="labelAbnominal">Abdominal</string>
+    <string name="labelSubescapular">Subescapular</string>
+    <string name="labelCoxa">Coxa</string>
     <string name="labelCalcularPercentual">Calcular</string>
     <string name="labelResultadoPercentualGordura">Resultados do Teste</string>
     <string name="labelTituloFormTeste">Percentual de Gordura - Guedes</string>
     <string name="labelTextViewHeaderDensidadeCorporal">Densidade Corporal</string>
-    <string name="labelTextViewHeaderComposicaoCorporal">Composição Corporal</string>
-    <string name="labelTextViewHeaderMassaMagra">Massa Magra (kg)</string>
-    <string name="labelTextViewHeaderGorda">Massa Gorda (kg)</string>
-    <string name="labelTextViewHeaderPercentualGordura">%Gordura</string>
-    <string name="labelTextViewHeaderPercentualMassaMagra">%Massa Magra</string>
-    <string name="labelTextViewHeaderPesoIdeal">Peso Ideal</string>
-    <string name="labelTextViewHeaderPesoEmExcesso">Peso em Excesso</string>
+    <string name="labelTextTitleResultTestComposicaoCorporal">Composição Corporal</string>
+    <string name="labelTextViewHeaderMassaMagra">Massa Magra(kg)</string>
+    <string name="labelTextViewHeaderGorda">Massa Gorda(kg)</string>
+    <string name="labelTextViewHeaderPercentualGordura">Percentual de Gordura(%)</string>
+    <string name="labelTextViewHeaderPercentualMassaMagra">Percentual de Massa Magra(%)</string>
+    <string name="labelTextViewHeaderPesoIdeal">Peso Ideal(kg)</string>
+    <string name="labelTextViewHeaderPesoEmExcesso">Peso em Excesso(kg)</string>
     <string name="labelTextViewHeaderClassificacao">Classificação</string>
     <string name="labelClassificaoMagro">Magro</string>
     <string name="labelClassificaoAbaixoMedia">Abaixo da Média</string>
@@ -31,6 +31,37 @@
     <string name="labelClassificacaoObeso">Obeso</string>
     <string name="labelMessageErrorMandatory">O campo {0} deve ser preenchido</string>
     <string name="labelBotaoVoltar">Voltar</string>
+
+    <string name="contentDescriptionSexoMasculino">Sexo Masculino</string>
+    <string name="contentDescriptionSexoFeminino">Sexo Feminino</string>
+
+    <string name="contentDescriptionPeso">Peso(em quilos)</string>
+    <string name="contentDescriptionTriceps">Tríceps(em centímetros)</string>
+    <string name="contentDescriptionSupraIliaca">Supra-ilíaca(em centímetros)</string>
+    <string name="contentDescriptionAbnominal">Abdominal(em centímetros)</string>
+    <string name="contentDescriptionSubescapular">Subescapular(em centímetros)</string>
+    <string name="contentDescriptionCoxa">Coxa(em centímetros)</string>
+    <string name="contentDescriptionCalcularPercentual">Calcular Percentual de Gordura</string>
+    <string name="contentDescriptionTituloFormTeste">Cálculo do percentual de gordura usando o protocolo de Guedes</string>
+
+    <string name="contentDescriptionSexo">Informe o sexo</string>
+
+    <string name="contentDescriptionResultadosTestePercentualGordura">Resultados do teste de percentual de gordura</string>
+    <string name="contentDescriptionResultadosTesteComposicaoCorporal">Resultados do teste de composição corporal</string>
+    <string name="contentDescriptionResultadoDensidadeCorporal">Sua densidade corporal é de {0}</string>
+    <string name="contentDescriptionResultadoPercentualGordura">Seu percentual de gordura é de {0} por cento</string>
+    <string name="contentDescriptionResultadoClassificacao">Seu percentual de gordura foi classificado como {0}</string>
+    <string name="contentDescriptionResultadoMassaGorda">Você possui {0} quilos de massa gorda</string>
+    <string name="contentDescriptionResultadoMassaMagra">Você possui {0} quilos de massa magra</string>
+    <string name="contentDescriptionResultadoPercentualMassaMagra">Seu percentual de massa magra é de {0} por cento</string>
+    <string name="contentDescriptionResultadoPesoIdeal">O seu peso ideal é de {0} quilos</string>
+    <string name="contentDescriptionResultadoPesoExcessoAbaixoIdeal">Você está {0} quilos abaixo do seu peso ideal</string>
+    <string name="contentDescriptionResultadoPesoExcessoAcimaIdeal">Você está {0} quilos abaixo do seu peso ideal</string>
+
+    <string name="labelTextTitleResultTestPercentualGordura">Percentual de Gordura</string>
+
+    <string name="templateValorResultadoAbaixoPesoIdeal">{0}(kg) abaixo do peso</string>
+    <string name="templateValorResultadoAcimaPesoIdeal">{0}(kg) acima do peso</string>
 
 
 
