@@ -1,4 +1,4 @@
-package com.example.calculo.percentual.gordura
+package com.example.calculo.percentual.gordura.components
 
 class ValidadorDadosCalculoForm(private var form: DadosCalculoForm) {
 

@@ -1,6 +1,6 @@
 package com.example.calculo.percentual.gordura
 
-import com.example.calculo.percentual.gordura.utils.FormatUtils
+import com.example.calculo.percentual.gordura.utils.FormatadorUtils
 import java.math.BigDecimal
 import java.text.MessageFormat
 
@@ -93,7 +93,7 @@ class PageMainActivity {
     }
 
     private fun formatarMedida(medida: BigDecimal): String {
-        return FormatUtils.formatarValor(medida)
+        return FormatadorUtils.formatarValor(medida)
     }
 
     private fun verificarMensagemErroCampo(fieldName:String, textLayoutErroId:Int){

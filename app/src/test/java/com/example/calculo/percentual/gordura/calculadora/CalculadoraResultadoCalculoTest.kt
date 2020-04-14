@@ -6,7 +6,7 @@ import org.junit.Test
 import java.math.BigDecimal
 
 
-class CalculadoraResultadoTest {
+class CalculadoraResultadoCalculoTest {
     @Test
     fun deveCalcularResultadoTesteHomens() {
         val dadosCalculo = DadosCalculo(Sexo.MASCULINO, 3, 32, BigDecimal(74), BigDecimal(10), BigDecimal(10), BigDecimal(10), BigDecimal(10.0), BigDecimal(10.0) )

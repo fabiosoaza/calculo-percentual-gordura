@@ -1,4 +1,4 @@
-package com.example.calculo.percentual.gordura
+package com.example.calculo.percentual.gordura.components
 
 import com.example.calculo.percentual.gordura.calculadora.DadosCalculo
 import com.example.calculo.percentual.gordura.calculadora.Sexo
@@ -6,7 +6,7 @@ import java.math.BigDecimal
 
 class DadosCalculoConverter(private var form: DadosCalculoForm) {
 
-    fun bind() : DadosCalculo{
+    fun converter() : DadosCalculo{
        val numeroDobrasCutaneas : Int = 3
 
         return DadosCalculo(

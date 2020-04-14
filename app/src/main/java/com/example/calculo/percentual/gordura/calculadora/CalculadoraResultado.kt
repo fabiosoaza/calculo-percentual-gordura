@@ -4,7 +4,7 @@ import java.math.BigDecimal
 
 class CalculadoraResultado {
 
-    fun calcularResultados(dadosCalculo: DadosCalculo): Resultado {
+    fun calcularResultados(dadosCalculo: DadosCalculo): ResultadoCalculo {
         val densidade = calculadoraDensidade(dadosCalculo).calcular()
         val percentualGorduraCorporal = calcularGorduraCorporal(densidade)
         val calculadoraComposicaoCorporal = calcularComposicaoCorporal(percentualGorduraCorporal, dadosCalculo)
@@ -15,7 +15,7 @@ class CalculadoraResultado {
         val pesoIdeal = calculadoraComposicaoCorporal.calcularPesoIdeal()
         val classificacao = classificar(dadosCalculo.sexo, percentualGorduraCorporal)
 
-        return Resultado(
+        return ResultadoCalculo(
             densidade,
             percentualGorduraCorporal,
             gorduraAbsoluta,

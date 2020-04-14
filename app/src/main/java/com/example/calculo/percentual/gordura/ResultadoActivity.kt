@@ -5,6 +5,7 @@ import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.example.calculo.percentual.gordura.calculadora.CalculadoraResultado
 import com.example.calculo.percentual.gordura.calculadora.DadosCalculo
+import com.example.calculo.percentual.gordura.components.ResultadosCalculoComponent
 import kotlinx.android.synthetic.main.activity_resultado.*
 
 class ResultadoActivity : AppCompatActivity() {
@@ -21,7 +22,7 @@ class ResultadoActivity : AppCompatActivity() {
 
     private fun atualizarResultados(dadosCalculo: DadosCalculo) {
         val resultado = CalculadoraResultado().calcularResultados(dadosCalculo)
-        val renderer = ResultadosTesteRenderer(this)
+        val renderer = ResultadosCalculoComponent(                this)
         renderer.atualizarResultados(resultado)
     }
 

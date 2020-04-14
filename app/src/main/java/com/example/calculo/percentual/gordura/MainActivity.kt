@@ -8,6 +8,9 @@ import android.view.View
 import android.widget.RadioGroup
 import androidx.appcompat.app.AppCompatActivity
 import com.example.calculo.percentual.gordura.calculadora.DadosCalculo
+import com.example.calculo.percentual.gordura.components.DadosCalculoConverter
+import com.example.calculo.percentual.gordura.components.DadosCalculoForm
+import com.example.calculo.percentual.gordura.components.ValidadorDadosCalculoForm
 import com.google.android.material.textfield.TextInputLayout
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -19,9 +22,10 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         btnCalcular.setOnClickListener(View.OnClickListener {
             val form = DadosCalculoForm(this)
-            val validador = ValidadorDadosCalculoForm(form)
+            val validador =ValidadorDadosCalculoForm(form)
             if (validador.validar()) {
-                abrirResultado(DadosCalculoConverter(form).bind())
+                abrirResultado(DadosCalculoConverter(form).converter()
+                )
             }
         })
 
@@ -44,7 +48,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun clearErrorMessageOnCheck(activity:AppCompatActivity): RadioGroup.OnCheckedChangeListener {
         return RadioGroup.OnCheckedChangeListener { _, _ ->
-            val form = DadosCalculoForm(activity)
+            val form = DadosCalculoForm( activity )
             if (form.isSexoMasculino()) {
                 layoutEditSubescapular.error = ""
                 layoutEditCoxa.error = ""

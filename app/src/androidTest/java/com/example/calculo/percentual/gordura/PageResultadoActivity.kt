@@ -1,12 +1,9 @@
 package com.example.calculo.percentual.gordura
 
 import androidx.test.InstrumentationRegistry
-import androidx.test.espresso.intent.Intents
-import androidx.test.espresso.intent.matcher.IntentMatchers.hasComponent
 import com.example.calculo.percentual.gordura.calculadora.ClassificacaoPercentualGordura
 import com.example.calculo.percentual.gordura.utils.ClassificacaoUtils
-import com.example.calculo.percentual.gordura.utils.FormatUtils
-import org.hamcrest.Matchers.not
+import com.example.calculo.percentual.gordura.utils.FormatadorUtils
 import java.math.BigDecimal
 import java.text.MessageFormat
 
@@ -69,7 +66,7 @@ class PageResultadoActivity {
     }
 
     private fun formatarValor(medida: BigDecimal): String {
-        return FormatUtils.formatarValor(medida)
+        return FormatadorUtils.formatarValor(medida)
     }
 
 

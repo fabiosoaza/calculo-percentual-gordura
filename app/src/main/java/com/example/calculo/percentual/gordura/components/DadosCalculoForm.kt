@@ -1,9 +1,10 @@
-package com.example.calculo.percentual.gordura
+package com.example.calculo.percentual.gordura.components
 
 import android.view.accessibility.AccessibilityEvent
 import android.widget.*
 import androidx.activity.ComponentActivity
-import com.example.calculo.percentual.gordura.utils.UIUtils
+import com.example.calculo.percentual.gordura.R
+import com.example.calculo.percentual.gordura.utils.ScroolViewUtils
 import com.google.android.material.textfield.TextInputLayout
 import java.text.MessageFormat
 
@@ -21,13 +22,27 @@ class DadosCalculoForm(private var view: ComponentActivity) {
     private val viewCoxa: EditText = view.findViewById<EditText>(R.id.editCoxa)
     private val viewScroll: ScrollView = view.findViewById<ScrollView>(R.id.scrollForm)
 
-    private val layoutViewIdade: TextInputLayout = view.findViewById<TextInputLayout>(R.id.layoutEditIdade)
-    private val layoutViewPeso: TextInputLayout = view.findViewById<TextInputLayout>(R.id.layoutEditPeso)
-    private val layoutViewSupra: TextInputLayout = view.findViewById<TextInputLayout>(R.id.layoutEditSupra)
-    private val layoutViewTriceps: TextInputLayout = view.findViewById<TextInputLayout>(R.id.layoutEditTriceps)
-    private val layoutViewAbdominal: TextInputLayout = view.findViewById<TextInputLayout>(R.id.layoutEditAbdominal)
-    private val layoutViewSubescapular: TextInputLayout = view.findViewById<TextInputLayout>(R.id.layoutEditSubescapular)
-    private val layoutViewCoxa: TextInputLayout = view.findViewById<TextInputLayout>(R.id.layoutEditCoxa)
+    private val layoutViewIdade: TextInputLayout = view.findViewById<TextInputLayout>(
+        R.id.layoutEditIdade
+    )
+    private val layoutViewPeso: TextInputLayout = view.findViewById<TextInputLayout>(
+        R.id.layoutEditPeso
+    )
+    private val layoutViewSupra: TextInputLayout = view.findViewById<TextInputLayout>(
+        R.id.layoutEditSupra
+    )
+    private val layoutViewTriceps: TextInputLayout = view.findViewById<TextInputLayout>(
+        R.id.layoutEditTriceps
+    )
+    private val layoutViewAbdominal: TextInputLayout = view.findViewById<TextInputLayout>(
+        R.id.layoutEditAbdominal
+    )
+    private val layoutViewSubescapular: TextInputLayout = view.findViewById<TextInputLayout>(
+        R.id.layoutEditSubescapular
+    )
+    private val layoutViewCoxa: TextInputLayout = view.findViewById<TextInputLayout>(
+        R.id.layoutEditCoxa
+    )
 
     private val nomeCampoIdade = view.getString(R.string.labelIdade)
     private val nomeCampoPeso = view.getString(R.string.labelPeso)
@@ -101,7 +116,7 @@ class DadosCalculoForm(private var view: ComponentActivity) {
 
     private fun exibirMensagemErro(editText: EditText, textViewMessage: TextInputLayout, mensagem: String ) {
         textViewMessage.error = mensagem
-        UIUtils.scrollVerticalyToElement(viewScroll, editText)
+        ScroolViewUtils.scrollVerticalyToElement(viewScroll, editText)
         editText.sendAccessibilityEvent(AccessibilityEvent.TYPE_VIEW_FOCUSED)
         editText.requestFocus();
     }

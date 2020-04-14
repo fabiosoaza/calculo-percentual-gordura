@@ -5,7 +5,7 @@ import java.text.DecimalFormat
 import java.text.DecimalFormatSymbols
 import java.util.*
 
-class FormatUtils {
+class FormatadorUtils {
     companion object {
         fun formatarValor(valor: BigDecimal): String {
             val decimalFormatSymbols: DecimalFormatSymbols = DecimalFormatSymbols.getInstance(Locale.getDefault())
